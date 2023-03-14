@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="BoldTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/helvetica_bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="RegularTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/helvetica_regular</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="RedButtonStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_red_button</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingVertical" tools:ignore="NewApi">8dp</item>
+        <item name="android:fontFamily">@font/helvetica_regular</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ProgressStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:progressTint">@color/main_color</item>
+        <item name="android:layout_marginTop">@dimen/margin_main</item>
+        <item name="android:visibility">gone</item>
+    </style>
+</resources>

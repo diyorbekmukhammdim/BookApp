@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_margin="@dimen/margin_main"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+          app:layout_constraintBottom_toBottomOf="parent"
+            style="@style/ProgressStyle" />
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_main"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:padding="6dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputTitleBookLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="42dp"
+            android:layout_marginTop="100dp"
+            android:hint="Title"
+            app:boxStrokeColor="@color/hint_color"
+            app:hintTextColor="@color/hint_color"
+            app:layout_constraintBottom_toTopOf="@+id/inputAuthorBookLayout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputTitleBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica_regular"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputAuthorBookLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="42dp"
+            android:layout_marginTop="@dimen/margin_main"
+            android:hint="Author"
+            app:boxStrokeColor="@color/hint_color"
+            app:hintTextColor="@color/hint_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputTitleBookLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputAuthorBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica_regular"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputPageCountLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="42dp"
+            android:layout_marginTop="@dimen/margin_main"
+            android:hint="Page count"
+            app:boxStrokeColor="@color/hint_color"
+            app:hintTextColor="@color/hint_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputAuthorBookLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputPageCountBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:fontFamily="@font/helvetica_regular"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputDescriptionBookLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="42dp"
+            android:layout_marginTop="@dimen/margin_main"
+            android:hint="About the book"
+            app:boxStrokeColor="@color/hint_color"
+            app:hintTextColor="@color/hint_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputPageCountLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputDescriptionBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica_regular"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#291313"
+            app:layout_constraintTop_toBottomOf="@id/inputDescriptionBookLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_margin="@dimen/margin_main"
+            android:id="@+id/btAddBook"
+            android:text="Add Book"
+            style="@style/BoldTextStyle"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

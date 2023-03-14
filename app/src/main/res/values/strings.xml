@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BookAppFlow</string>
+    <string name="welcome">Welcome</string>
+    <string name="password">Password</string>
+    <string name="phone">Phone</string>
+    <string name="log_in">Log In</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="create_account">Create Account</string>
+    <string name="what_do_you_want_to_red_today">What do you want to red today?</string>
+    <string name="hello_tricia">Hello, Tricia</string>
+</resources>

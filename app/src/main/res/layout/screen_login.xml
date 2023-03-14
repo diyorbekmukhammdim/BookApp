@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ProgressBar
+        android:id="@+id/progress"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="#787575"
+        style="@style/ProgressStyle" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLogo"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputPhoneLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="42dp"
+        android:layout_marginTop="@dimen/margin_largest"
+        android:hint="@string/phone"
+        app:boxStrokeColor="@color/hint_color"
+        app:hintTextColor="@color/hint_color"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo">
+
+        <com.arefbhrn.maskededittext.MaskedEditText
+            android:id="@+id/inputPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica_regular"
+            android:textSize="16sp"
+            android:inputType="phone"
+            android:typeface="monospace"
+            app:allowed_chars="1234567890"
+            app:keep_hint="true"
+            app:mask="+998-##-###-##-##" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputPasswordLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="42dp"
+        android:layout_marginTop="@dimen/margin_main"
+        android:hint="@string/password"
+        app:boxStrokeColor="@color/hint_color"
+        app:hintTextColor="@color/hint_color"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputPhoneLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica_regular"
+            android:inputType="textPassword"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btLogin"
+        style="@style/RedButtonStyle"
+        android:layout_marginHorizontal="42dp"
+        android:layout_marginTop="@dimen/margin_largest"
+        android:text="@string/log_in"
+        android:enabled="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputPasswordLayout" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textBottom"
+        style="@style/RegularTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_main"
+        android:text=""
+        android:textColor="@color/hint_color"
+        android:textSize="14sp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="@id/btLogin"
+        app:layout_constraintRight_toLeftOf="@id/btSignUp"
+        app:layout_constraintTop_toBottomOf="@id/btLogin" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btSignUp"
+        style="@style/BoldTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_main"
+        android:text="Sign up"
+        android:textColor="@color/hint_color"
+        android:textSize="14sp"
+        android:layout_marginLeft="3dp"
+        app:layout_constraintLeft_toRightOf="@id/textBottom"
+        app:layout_constraintRight_toRightOf="@id/btLogin"
+        app:layout_constraintTop_toBottomOf="@id/btLogin" />
+</androidx.constraintlayout.widget.ConstraintLayout>

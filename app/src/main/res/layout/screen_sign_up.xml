@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLogo"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputFirstNameLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="42dp"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:hint="@string/first_name"
+        app:boxStrokeColor="@color/hint_color"
+        app:hintTextColor="@color/hint_color"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica_regular"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLastNameLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="42dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:hint="@string/last_name"
+        app:boxStrokeColor="@color/hint_color"
+        app:hintTextColor="@color/hint_color"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputFirstNameLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica_regular"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputPhoneLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="42dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:hint="@string/phone"
+        app:boxStrokeColor="@color/hint_color"
+        app:hintTextColor="@color/hint_color"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputLastNameLayout">
+
+        <com.arefbhrn.maskededittext.MaskedEditText
+            android:id="@+id/inputPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica_regular"
+            android:hint="912345678"
+            android:inputType="phone"
+            android:textSize="16sp"
+            android:typeface="monospace"
+            app:allowed_chars="1234567890"
+            app:keep_hint="true"
+            app:mask="+998-##-###-##-##" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputPasswordLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="42dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:hint="@string/password"
+        app:boxStrokeColor="@color/hint_color"
+        app:hintTextColor="@color/hint_color"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputPhoneLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica_regular"
+            android:inputType="textPassword"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputPasswordRetyLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="42dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:hint="Confirm password"
+        app:passwordToggleEnabled="true"
+        app:boxStrokeColor="@color/hint_color"
+        app:hintTextColor="@color/hint_color"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputPasswordLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputPasswordRety"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica_regular"
+            android:inputType="textPassword"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btCreateAccount"
+        style="@style/RedButtonStyle"
+        android:layout_marginHorizontal="42dp"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="@string/create_account"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputPasswordRetyLayout" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textBottom"
+        style="@style/RegularTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:textColor="@color/hint_color"
+        android:textSize="14sp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="@id/btCreateAccount"
+        app:layout_constraintRight_toLeftOf="@id/btLogInHere"
+        app:layout_constraintTop_toBottomOf="@id/btCreateAccount" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btLogInHere"
+        style="@style/BoldTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="Log in"
+        android:textColor="@color/hint_color"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/textBottom"
+        app:layout_constraintRight_toRightOf="@id/btCreateAccount"
+        app:layout_constraintTop_toBottomOf="@id/btCreateAccount" />
+    <ProgressBar
+        android:id="@+id/progress"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="#6A6969"
+        style="@style/ProgressStyle" />
+</androidx.constraintlayout.widget.ConstraintLayout>
